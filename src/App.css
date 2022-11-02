@@ -1,28 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
 }
 
 .App {
   height: 100vh;
+}
 
-  margin-inline: auto;
+header {
+  background-color: rgb(46, 46, 251);
+  height: 6rem;
+}
+
+.circle {
+  /* background-color: rgb(253, 114, 33); */
+  background-color: rgb(248, 124, 52);
+  color: white;
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+circle h1 {
+  font-weight: 900;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: rgb(46, 46, 251);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  height: 25rem;
+  position: relative;
+}
+
+.infoContainer {
+  position: absolute;
+  top: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoContainer h2 {
+  font-size: 1.8rem;
+}
+
+.highlightText {
+  color: orange;
+  text-decoration: underline wavy;
+}
+
+.infoContainer h4 {
+  margin-top: 1rem;
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
 }
 
 .excuseContainer {
-  width: 80%;
+  padding: 20px;
+  padding-bottom: 50px;
+  width: 85%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-color: rgb(207, 207, 255);
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: -18rem;
 }
 
 .emojiContainer {
@@ -39,7 +121,7 @@
 }
 
 label {
-  width: 80%;
+  width: 100%;
 }
 
 select {
@@ -47,7 +129,6 @@ select {
   height: 40px;
   font-size: 1rem;
 
-  
   border-radius: 8px;
   background-color: white;
   border: 0;
@@ -56,7 +137,7 @@ select {
 }
 
 #fetchButton {
-  width: 80%;
+  width: 100%;
   padding: 8px;
   border-radius: 8px;
   background-color: white;
@@ -67,10 +148,81 @@ select {
   background-color: white;
   padding: 8px;
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   text-align: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .generatedExcuse {
-  
+}
+
+.copyPopUp {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(46, 46, 251);
+  color: white;
+  padding: 3px 8px 3px 8px;
+  border-radius: 8px;
+  /* transition: ease-in-out 0.2s; */
+}
+
+.copyButton {
+  position: absolute;
+  bottom: -1.8rem;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.styleDiv {
+  background-color: rgb(39, 10, 107);
+}
+
+.styleCircle {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  background-color: rgb(46, 46, 251);
+}
+
+.dummy {
+  /* background-color: rgb(84, 37, 255); */
+  background-color: rgb(39, 10, 107);
+  height: 20rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 8rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.suitEmoji {
+  font-size: 3rem;
+}
+
+@media (min-width: 650px) {
+  .excuseContainer {
+    max-width: 600px;
+  }
 }
