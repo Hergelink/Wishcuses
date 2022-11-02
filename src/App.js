@@ -3,62 +3,65 @@ import './App.css';
 import Axios from 'axios';
 
 function App() {
-  const [catFact, setCatFact] = useState('');
-  const [name, setName] = useState(0);
   const [excuse, setExcuse] = useState('');
-
-  const fetchCatFact = () => {
-    Axios.get('https://catfact.ninja/fact').then((res) => {
-      setCatFact(res.data.fact);
-    });
-  };
-  const fetchAge = () => {
-    Axios.get(`https://api.agify.io/?name=${name}`).then((res) => {
-      setName(res.data.age);
-    });
-  };
+  const [value, setValue] = useState('');
 
   const fetchFamilyExcuse = () => {
     Axios.get('https://excuser.herokuapp.com/v1/excuse/family/').then((res) => {
-      setExcuse(res.data[0].excuse);
+      setExcuse(res.data[0]?.excuse);
     });
   };
   const fetchOfficeExcuse = () => {
     Axios.get('https://excuser.herokuapp.com/v1/excuse/office/').then((res) => {
-      setExcuse(res.data[0].excuse);
+      setExcuse(res.data[0]?.excuse);
     });
   };
   const fetchPartyExcuse = () => {
     Axios.get('https://excuser.herokuapp.com/v1/excuse/party/').then((res) => {
-      setExcuse(res.data[0].excuse);
+      setExcuse(res.data[0]?.excuse);
     });
   };
 
+  const fetchData = () => {
+    return value === 'office'
+      ? fetchOfficeExcuse()
+      : value === 'family'
+      ? fetchFamilyExcuse()
+      : fetchPartyExcuse();
+  };
+
   useEffect(() => {
-    fetchCatFact();
-    fetchAge();
-    fetchFamilyExcuse();
-    fetchOfficeExcuse();
-    fetchPartyExcuse();
-  }, []);
+    fetchData();
+    // fetchFamilyExcuse();
+    // fetchOfficeExcuse();
+    // fetchPartyExcuse();
+  }, [value]);
 
   return (
     <div className='App'>
-      <button onClick={fetchCatFact}>Generate Cat Fact</button>
-      <p>{catFact}</p>
-      <input
-        type='text'
-        placeholder='enter name'
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      <button onClick={fetchAge}>Guess Age</button>
-      <p>{name}</p>
-      <button onClick={fetchFamilyExcuse}>Excuse for Family</button>
-      <button onClick={fetchOfficeExcuse}>Excuse for Office</button>
-      <button onClick={fetchPartyExcuse}>Excuse for Party</button>
-      <p>{excuse}</p>
+      <div className='excuseContainer'>
+        <div className='emojiContainer'>
+          {value === 'party' ? '🎉' : value === 'office' ? '💼' : '👪'}
+        </div>
+        <label htmlFor='excuse'>
+          <select
+            onChange={(e) => setValue(e.target.value)}
+            name='excuse'
+            id='excuse'
+          >
+            <option value='family'>Family Gathering Excuse</option>
+            <option value='office'>Office Excuse</option>
+            <option value='party'>Party Excuse</option>
+          </select>
+        </label>
+
+        <button id='fetchButton' onClick={fetchData}>
+          Generate Excuse
+        </button>
+        <div className='generatedExcuseCotainer'>
+          <p className='generatedExcuse'>{excuse}</p>
+        </div>
+      </div>
     </div>
   );
 }
