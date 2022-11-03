@@ -299,6 +299,10 @@ footer a {
   .excuseContainer {
     max-width: 600px;
   }
+
+  .linkContainer {
+  max-width: 350px;
+  }
 }
 
 @keyframes animate-popup {
