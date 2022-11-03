@@ -131,6 +131,7 @@ main {
 label {
   width: 100%;
   background-color: transparent;
+  text-align: center;
 }
 
 select {
