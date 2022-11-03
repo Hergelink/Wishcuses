@@ -13,13 +13,13 @@
 }
 
 header {
-  background-color: rgb(46, 46, 251);
+  background-color: rgb(100, 111, 212);
   height: 6rem;
 }
 
 .circle {
   /* background-color: rgb(253, 114, 33); */
-  background-color: rgb(248, 124, 52);
+  background-color: rgb(36, 47, 155);
   color: white;
   width: 100%;
   height: 6rem;
@@ -43,7 +43,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(46, 46, 251);
+  background-color: rgb(100, 111, 212);
   padding-top: 2rem;
   padding-bottom: 2rem;
 
@@ -53,7 +53,7 @@ main {
 
 .infoContainer {
   position: absolute;
-  top: 4rem;
+  top: 2.2rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -90,11 +90,15 @@ main {
   margin-top: 0.2rem;
 }
 
+.arrow {
+  margin-right: 0.2rem;
+}
+
 .excuseContainer {
   padding: 20px;
   padding-bottom: 50px;
   width: 85%;
-  height: 400px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,9 +106,10 @@ main {
   gap: 10px;
   background-color: rgb(207, 207, 255);
   border-radius: 8px;
-
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  
   position: absolute;
-  bottom: -18rem;
+  bottom: -22rem;
 }
 
 .emojiContainer {
@@ -118,10 +123,12 @@ main {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 label {
   width: 100%;
+  
 }
 
 select {
@@ -130,6 +137,7 @@ select {
   font-size: 1rem;
 
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   background-color: white;
   border: 0;
 
@@ -142,6 +150,8 @@ select {
   border-radius: 8px;
   background-color: white;
   border: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  cursor: pointer;
 }
 
 .generatedExcuseCotainer {
@@ -149,29 +159,29 @@ select {
   padding: 8px;
   border-radius: 8px;
   width: 100%;
+  height: 200px;
   text-align: center;
   cursor: pointer;
   position: relative;
-}
-
-.generatedExcuse {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 .copyPopUp {
   position: absolute;
-  bottom: -5rem;
+  bottom: -1.6rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(46, 46, 251);
+  background-color: rgb(100, 111, 212);
   color: white;
   padding: 3px 8px 3px 8px;
   border-radius: 8px;
-  /* transition: ease-in-out 0.2s; */
+
+  animation: animate-popup 5s ease;
 }
 
 .copyButton {
   position: absolute;
-  bottom: -1.8rem;
+  bottom: -1.5rem;
   width: 50px;
   height: 50px;
   border: 2px solid black;
@@ -183,20 +193,65 @@ select {
 }
 
 .styleDiv {
-  background-color: rgb(39, 10, 107);
+  background-color: rgb(155, 163, 235);
+  
 }
 
 .styleCircle {
   width: 100%;
   height: 6rem;
   border-radius: 0 0 40% 40%;
-  background-color: rgb(46, 46, 251);
+  background-color: rgb(100, 111, 212);
 }
 
-.dummy {
-  /* background-color: rgb(84, 37, 255); */
-  background-color: rgb(39, 10, 107);
-  height: 20rem;
+.styleContainer {
+  background-color: rgb(155, 163, 235);
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.styleDivSecond {
+  background-color: rgb(223, 246, 255);
+}
+
+.styleCircleSecond {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  background-color: rgb(155, 163, 235);
+}
+
+.linkContainer {
+  background-color: rgb(98, 113, 248);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  border-radius: 80px;
+  width: 80%;
+  height: 150px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.wishEmojiContainer {
+  
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.linkArrow {
+  width: 30px;
 }
 
 footer {
@@ -207,14 +262,15 @@ footer {
   align-items: center;
   justify-content: center;
 
-  margin-top: 8rem;
+  background-color: rgb(223, 246, 255);
 }
 
 footer a {
-  text-decoration: none;
+  text-decoration: underline dashed rgb(36, 47, 155);
   color: black;
   font-weight: 900;
   cursor: pointer;
+  margin-left: 0.15rem;
 }
 
 .suitEmoji {
@@ -224,5 +280,14 @@ footer a {
 @media (min-width: 650px) {
   .excuseContainer {
     max-width: 600px;
+  }
+}
+
+@keyframes animate-popup {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
