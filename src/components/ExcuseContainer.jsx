@@ -13,7 +13,7 @@ function ExcuseContainer({value, setValue, fetchData, excuse, copied, setCopied}
           name='excuse'
           id='excuse'
         >
-          <option value='family'>Family Gathering Excuse</option>
+          <option value='family'>Gatherings Excuse</option>
           <option value='office'>Office Excuse</option>
           <option value='party'>Party Excuse</option>
         </select>
