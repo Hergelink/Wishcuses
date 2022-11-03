@@ -5,21 +5,21 @@ function InfoContainer() {
   return (
     <div className='infoContainer'>
       <h2>
-        Wishes made <span className='highlightText'>simple.</span>
+        Excuses made <span className='highlightText'>simple.</span>
       </h2>
-      <h4>Generate wishes for different occasions fast & simple</h4>
+      <h4>Generate excuses for different occasions fast & simple</h4>
       <ul className='list'>
         <div className='listItem'>
           <img src={rightArrow} fill='white' className='arrow' />
-          <li>Wishes for Birthdays</li>
+          <li>Excuses for Family Gatherings</li>
         </div>
         <div className='listItem'>
           <img src={rightArrow} fill='white' className='arrow' />
-          <li>Wishes for Promotions</li>
+          <li>Excuses for your Office</li>
         </div>
         <div className='listItem'>
           <img src={rightArrow} fill='white' className='arrow' />
-          <li>Wishes for Retirements</li>
+          <li>Excuses for Parties</li>
         </div>
       </ul>
     </div>

@@ -13,13 +13,13 @@
 }
 
 header {
-  background-color: rgb(255, 130, 67);
+  background-color: rgb(100, 111, 212);
   height: 6rem;
 }
 
 .circle {
   /* background-color: rgb(253, 114, 33); */
-  background-color: rgb(226, 106, 44);
+  background-color: rgb(36, 47, 155);
   color: white;
   width: 100%;
   height: 6rem;
@@ -43,7 +43,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 130, 67);
+  background-color: rgb(100, 111, 212);
   padding-top: 2rem;
   padding-bottom: 2rem;
 
@@ -65,7 +65,7 @@ main {
 }
 
 .highlightText {
-  color: rgb(54, 68, 195);
+  color: orange;
   text-decoration: underline wavy;
 }
 
@@ -106,7 +106,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: rgb(255, 208, 127);
+  background-color: rgb(207, 207, 255);
   border-radius: 8px;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   
@@ -152,7 +152,7 @@ select {
   width: 100%;
   padding: 8px;
   border-radius: 8px;
-  background-color: rgb(226, 106, 44);
+  background-color: rgb(54, 68, 195);
   color: white;
   font-family: inherit;
   font-size: 1.1rem;
@@ -163,8 +163,8 @@ select {
 
 #fetchButton:hover {
   background-color: white;
-  color: rgb(226, 106, 44);
-  border: 1px solid rgb(226, 106, 44);
+  color: rgb(54, 68, 195);
+  border: 1px solid rgb(54, 68, 195);
   padding: 7px;
 }
 
@@ -208,11 +208,11 @@ select {
 
 .copyButton:hover {
   /* background-color: rgb(155, 163, 235); */
-  background-color: rgb(152, 162, 255);
+  background-color: orange;
 }
 
 .styleDiv {
-  background-color: rgb(253, 166, 93);
+  background-color: rgb(155, 163, 235);
   
 }
 
@@ -220,11 +220,11 @@ select {
   width: 100%;
   height: 6rem;
   border-radius: 0 0 40% 40%;
-  background-color: rgb(255, 130, 67);
+  background-color: rgb(100, 111, 212);
 }
 
 .styleContainer {
-  background-color: rgb(253, 166, 93);
+  background-color: rgb(155, 163, 235);
   height: 32rem;
   display: flex;
   flex-direction: column;
@@ -233,18 +233,18 @@ select {
 }
 
 .styleDivSecond {
-  background-color: rgb(255, 208, 127);
+  background-color: rgb(223, 246, 255);
 }
 
 .styleCircleSecond {
   width: 100%;
   height: 6rem;
   border-radius: 0 0 40% 40%;
-  background-color: rgb(253, 166, 93);
+  background-color: rgb(155, 163, 235);
 }
 
 .linkContainer {
-  background-color: rgb(226, 106, 44);
+  background-color: rgb(98, 113, 248);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
   border-radius: 80px;
   width: 80%;
@@ -281,7 +281,7 @@ footer {
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(255, 208, 127);
+  background-color: rgb(223, 246, 255);
 }
 
 footer a {
