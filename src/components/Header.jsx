@@ -4,8 +4,8 @@ function Header() {
   return (
     <header>
     <div className='circle'>
-      <h1>Excuse Generator</h1>
-      <span className='logo'>🧰</span>
+      <h1>Wishes Generator</h1>
+      <span className='logo'>🎉</span>
     </div>
   </header>
   )
