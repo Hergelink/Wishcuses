@@ -1,0 +1,289 @@
+.excuseHeader {
+  background-color: rgb(100, 111, 212);
+  height: 6rem;
+}
+
+.excuseCircle {
+  /* background-color: rgb(253, 114, 33); */
+  background-color: rgb(36, 47, 155);
+  color: white;
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.excuseCircle h2 {
+  font-weight: 900;
+}
+
+.excuseLogo {
+  font-size: 2rem;
+}
+
+.excuseMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(100, 111, 212);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  height: 25rem;
+  position: relative;
+}
+
+.excuseInfoContainer {
+  position: absolute;
+  top: 2.2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.excuseInfoContainer h2 {
+  font-size: 1.8rem;
+}
+
+.excuseHighlightText {
+  color: orange;
+  text-decoration: underline wavy;
+}
+
+.excuseInfoContainer h4 {
+  margin-top: 1rem;
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.excuseList {
+  list-style: none;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+}
+
+.excuseListItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+
+.excuseContainer {
+  padding: 20px;
+  padding-bottom: 50px;
+  width: 85%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(207, 207, 255);
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+  position: absolute;
+  bottom: -22rem;
+}
+
+.excuseEmojiContainer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.excuseLabel {
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+
+.excuseSelect {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  background-color: white;
+  color: black;
+  border: 0;
+
+  text-align: center;
+}
+
+.excuseFetchButton {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgb(54, 68, 195);
+  color: white;
+  font-family: inherit;
+  font-size: 1.1rem;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  cursor: pointer;
+}
+
+.excuseFetchButton:hover {
+  background-color: white;
+  color: rgb(54, 68, 195);
+  border: 1px solid rgb(54, 68, 195);
+  padding: 7px;
+}
+
+.generatedExcuseCotainer {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.excuseCopyPopUp {
+  position: absolute;
+  bottom: -1.6rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(100, 111, 212);
+  color: white;
+  padding: 3px 8px 3px 8px;
+  border-radius: 8px;
+
+  animation: animate-popup 5s ease;
+}
+
+.excuseCopyButton {
+  position: absolute;
+  bottom: -1.5rem;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: rgb(207, 207, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.excuseCopyButton:hover {
+  background-color: rgb(155, 163, 235);
+}
+
+.excuseStyleDiv {
+  background-color: rgb(155, 163, 235);
+}
+
+.excuseStyleCircle {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  background-color: rgb(100, 111, 212);
+}
+
+.excuseStyleContainer {
+  background-color: rgb(155, 163, 235);
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.excuseStyleDivSecond {
+  background-color: rgb(223, 246, 255);
+}
+
+.excuseStyleCircleSecond {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0 0 40% 40%;
+  background-color: rgb(155, 163, 235);
+}
+
+.excuseLinkContainer {
+  background-color: rgb(98, 113, 248);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  border-radius: 80px;
+  width: 80%;
+  height: 150px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.linkToWishContainer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.excuseFooter {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(223, 246, 255);
+}
+
+.excuseFooter a {
+  text-decoration: underline dashed rgb(36, 47, 155);
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  margin-left: 0.15rem;
+}
+
+@media (min-width: 650px) {
+  .excuseContainer {
+    max-width: 600px;
+  }
+
+  .excuseLinkContainer {
+    max-width: 350px;
+  }
+}
+
+@keyframes animate-popup {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

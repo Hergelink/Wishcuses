@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Footer() {
+function WishesFooter() {
   return (
-    <footer>
+    <footer className='wishesFooter'>
       <p>
         Created by
         <a href='https://github.com/Hergelink' target='_blank'>
@@ -14,4 +14,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default WishesFooter;

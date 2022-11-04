@@ -1,23 +1,23 @@
 import React from 'react';
-import rightArrow from '../assets/rightArrow.svg';
+import rightArrow from '../../assets/rightArrow.svg';
 
-function InfoContainer() {
+function ExcuseInfoContainer() {
   return (
-    <div className='infoContainer'>
+    <div className='excuseInfoContainer'>
       <h2>
-        Excuses made <span className='highlightText'>simple.</span>
+        Excuses made <span className='excuseHighlightText'>simple.</span>
       </h2>
       <h4>Generate excuses for different occasions fast & simple</h4>
-      <ul className='list'>
-        <div className='listItem'>
+      <ul className='excuseList'>
+        <div className='excuseListItem'>
           <img src={rightArrow} fill='white' className='arrow' />
           <li>Excuses for Family Gatherings</li>
         </div>
-        <div className='listItem'>
+        <div className='excuseListItem'>
           <img src={rightArrow} fill='white' className='arrow' />
           <li>Excuses for your Office</li>
         </div>
-        <div className='listItem'>
+        <div className='excuseListItem'>
           <img src={rightArrow} fill='white' className='arrow' />
           <li>Excuses for Parties</li>
         </div>
@@ -26,4 +26,4 @@ function InfoContainer() {
   );
 }
 
-export default InfoContainer;
+export default ExcuseInfoContainer;
