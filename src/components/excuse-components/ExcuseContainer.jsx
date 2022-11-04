@@ -12,7 +12,7 @@ function ExcuseContainer({
     <>
       <div className='excuseContainer'>
         <div className='excuseEmojiContainer'>
-          {value === 'party' ? '🎉' : value === 'office' ? '💼' : '👪'}
+          {value === 'party' ? '🎉' : value === 'office' ? '💼' : value === 'developer' ? '💻' : '👪'}
         </div>
         <label htmlFor='excuse' className='excuseLabel'>
           <select
@@ -24,10 +24,11 @@ function ExcuseContainer({
             <option value='family'>Gatherings Excuse</option>
             <option value='office'>Office Excuse</option>
             <option value='party'>Party Excuse</option>
+            <option value='developer'>Developer Excuse</option>
           </select>
         </label>
 
-        <button class='excuseFetchButton' onClick={fetchData}>
+        <button className='excuseFetchButton' onClick={fetchData}>
           Generate Excuse
         </button>
         <div

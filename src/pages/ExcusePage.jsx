@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import '../styles/excuse.css'
-
+import '../styles/excuse.css';
 import ExcuseHeader from '../components/excuse-components/ExcuseHeader';
-
 import ExcuseLinkContainer from '../components/excuse-components/ExcuseLinkContainer';
 import ExcuseFooter from '../components/excuse-components/ExcuseFooter';
 import ExcuseInfoContainer from '../components/excuse-components/ExcuseInfoContainer';
 import ExcuseContainer from '../components/excuse-components/ExcuseContainer';
-
 
 function ExcusePage() {
   const [excuse, setExcuse] = useState('');
@@ -31,12 +28,22 @@ function ExcusePage() {
     });
   };
 
+  const fetchDeveloperExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/developers/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
   const fetchData = () => {
     return value === 'office'
       ? fetchOfficeExcuse()
       : value === 'family'
       ? fetchFamilyExcuse()
-      : fetchPartyExcuse();
+      : value === 'party'
+      ? fetchPartyExcuse()
+      : fetchDeveloperExcuse();
   };
 
   useEffect(() => {
