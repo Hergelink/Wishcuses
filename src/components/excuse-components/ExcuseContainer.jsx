@@ -12,7 +12,21 @@ function ExcuseContainer({
     <>
       <div className='excuseContainer'>
         <div className='excuseEmojiContainer'>
-          {value === 'party' ? '🎉' : value === 'office' ? '💼' : value === 'developer' ? '💻' : '👪'}
+          {value === 'party'
+            ? '🎉'
+            : value === 'family'
+            ? '👪'
+            : value === 'developer'
+            ? '💻'
+            : value === 'college'
+            ? '🎓'
+            : value === 'funny'
+            ? '🤡'
+            : value === 'exaggerated'
+            ? '🤯'
+            : value === 'gamer'
+            ? '🎮'
+            : '💼'}
         </div>
         <label htmlFor='excuse' className='excuseLabel'>
           <select
@@ -21,10 +35,14 @@ function ExcuseContainer({
             id='excuse'
             className='excuseSelect'
           >
-            <option value='family'>Gatherings Excuse</option>
-            <option value='office'>Office Excuse</option>
-            <option value='party'>Party Excuse</option>
-            <option value='developer'>Developer Excuse</option>
+            <option value='office'>Office Excuses</option>
+            <option value='family'>Gatherings Excuses</option>
+            <option value='party'>Party Excuses</option>
+            <option value='developer'>Developer Excuses</option>
+            <option value='gamer'>Gamer Excuses</option>
+            <option value='college'>College Excuses</option>
+            <option value='funny'>Funny Excuses</option>
+            <option value='exaggerated'>Exaggerated Excuses</option>
           </select>
         </label>
 
@@ -34,7 +52,6 @@ function ExcuseContainer({
         <div
           className='generatedExcuseCotainer'
           onClick={(e) => {
-            // navigator.clipboard.writeText(e.target.innerText);
             navigator.clipboard.writeText(excuse);
 
             setCopied(true);

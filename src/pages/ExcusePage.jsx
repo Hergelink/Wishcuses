@@ -36,6 +36,34 @@ function ExcusePage() {
     );
   };
 
+  const fetchCollegeExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/developers/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
+  const fetchFunnyExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/funny/').then((res) => {
+      setExcuse(res.data[0]?.excuse);
+    });
+  };
+
+  const fetchExaggeratedExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/unbelievable/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
+  const fetchGamerExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/gaming/').then((res) => {
+      setExcuse(res.data[0]?.excuse);
+    });
+  };
+
   const fetchData = () => {
     return value === 'office'
       ? fetchOfficeExcuse()
@@ -43,13 +71,18 @@ function ExcusePage() {
       ? fetchFamilyExcuse()
       : value === 'party'
       ? fetchPartyExcuse()
+      : value === 'college'
+      ? fetchCollegeExcuse()
+      : value === 'funny'
+      ? fetchFunnyExcuse()
+      : value === 'exaggerated'
+      ? fetchExaggeratedExcuse()
+      : value === 'gamer'
+      ? fetchGamerExcuse()
       : fetchDeveloperExcuse();
   };
 
   useEffect(() => {
-    // to scroll up
-    // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    // 
     fetchData();
   }, [value]);
 
