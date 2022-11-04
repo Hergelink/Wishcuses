@@ -1,15 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HomeFooter from '../components/home-components/HomeFooter';
 
 function HomePage() {
   return (
-    <div>
-      <div>
-        <Link to='/excuse-generator'>Excuse</Link>
+    <div className='homeContainer'>
+      <div className='homeInfoDiv'>
+        <h1>Generate wishes or excuses for different occasions</h1>
       </div>
-      <div>
-        <Link to='/wishes-generator'>Wishes</Link>
-      </div>
+
+      <Link to='/wishes-generator' className='homeWishesContainer'>
+        <div className='homeDivs'>
+          <div className='homeEmojiDivs'>🎂</div>
+          <h3>Generate Wishes</h3>
+        </div>
+      </Link>
+
+      <Link to='/excuse-generator' className='homeExcuseContainer'>
+        <div className='homeDivs'>
+          <div className='homeEmojiDivs'>🧰</div>
+          <h3>Generate Excuses</h3>
+        </div>
+      </Link>
+
+      <HomeFooter />
     </div>
   );
 }

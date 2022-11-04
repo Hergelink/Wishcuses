@@ -65,8 +65,8 @@ function ExcusePage() {
   };
 
   const fetchData = () => {
-    return value === 'office'
-      ? fetchOfficeExcuse()
+    return value === 'developer'
+      ? fetchDeveloperExcuse()
       : value === 'family'
       ? fetchFamilyExcuse()
       : value === 'party'
@@ -79,7 +79,7 @@ function ExcusePage() {
       ? fetchExaggeratedExcuse()
       : value === 'gamer'
       ? fetchGamerExcuse()
-      : fetchDeveloperExcuse();
+      : fetchOfficeExcuse();
   };
 
   useEffect(() => {

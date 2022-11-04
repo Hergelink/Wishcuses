@@ -8,9 +8,6 @@
   font-weight: 400;
 }
 
-.App {
-  height: 100vh;
-}
 
 .mainHeader {
   background-color: black;
@@ -37,4 +34,110 @@
 
 .suitEmoji {
   font-size: 3rem;
+}
+
+/* Home Page */
+
+.homeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeInfoDiv {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeInfoDiv h1 {
+  text-align: center;
+}
+
+.homeWishesContainer {
+  width: 80%;
+  height: 300px;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(255, 208, 127);
+  color: white;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+  cursor: pointer;
+}
+
+.homeExcuseContainer {
+  width: 80%;
+  height: 300px;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(100, 111, 212);
+  color: white;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+  cursor: pointer;
+}
+
+.homeDivs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeEmojiDivs {
+  width: 60px;
+  height: 60px;
+  /* background-color: white; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.homeFooter {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  color: white;
+}
+
+.homeFooter a {
+  text-decoration: underline dashed rgb(36, 47, 155);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  margin-left: 0.15rem;
+}
+
+@media (min-width: 768px) {
 }
