@@ -9,7 +9,7 @@ function LinkContainer() {
     <Link to='/excuse-generator' className='wishesLinkContainer' onClick={scrollToTop}>
       <div className='linkToExcuseContainer'>🧰</div>
       <h3>Check out the Excuse Generator!</h3>
-      <img src={rightArrow} className='linkArrow' />
+      <img src={rightArrow} alt='right arrow' className='linkArrow' />
     </Link>
   );
 }

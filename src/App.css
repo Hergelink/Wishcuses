@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 * {
   margin: 0;
@@ -13,13 +14,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
-.mainHeader a {
+.mainHeaderLogo {
   text-decoration: none;
   color: white;
   cursor: pointer;
   font-size: 2rem;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.logoDot {
+  color: yellow;
 }
 
 .arrow {
@@ -43,6 +50,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .homeContainer {
@@ -51,6 +71,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .homeInfoDiv {
@@ -61,10 +94,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .homeInfoDiv h1 {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .homeLinkContainers {
@@ -84,7 +119,18 @@
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(255, 130, 67);
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: white;
   text-decoration: none;
 
@@ -104,7 +150,18 @@
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(100, 111, 212);
+  background: #24c6dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: white;
   text-decoration: none;
 
@@ -123,14 +180,14 @@
 }
 
 .homeEmojiDivs {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   /* background-color: white; */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .homeFooter {
@@ -147,7 +204,7 @@
 }
 
 .homeFooter a {
-  text-decoration: underline dashed rgb(36, 47, 155);
+  text-decoration: underline dashed orange;
   color: white;
   font-weight: 900;
   cursor: pointer;
