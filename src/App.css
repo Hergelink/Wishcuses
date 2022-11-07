@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  height: 4rem;
 }
 
 .mainHeaderLogo {
@@ -98,10 +98,36 @@
   color: white;
 }
 
+.homeHeaderSpan {
+  text-decoration: underline dashed yellow;
+}
+
+.homeInfoDiv h2 {
+  margin-top: 1rem;
+  width: 95%;
+  font-size: 1.4rem;
+}
+
+.lineBreak {
+  margin-top: 1rem;
+  width: 90%;
+  border: 0;
+  border-radius: 10px;
+  height: 0.1rem;
+  background-color: rgba(237, 237, 237, 0.148);
+}
+
+.homeInfoDiv p {
+  margin-top: 1rem;
+  width: 85%;
+  font-size: 1.2rem;
+}
+
 
 
 .homeLinkContainers {
   width: 100%;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,7 +228,7 @@
 }
 
 .homeFooter a {
-  text-decoration: underline dashed orange;
+  text-decoration: underline yellow;
   color: white;
   font-weight: 900;
   cursor: pointer;
@@ -212,10 +238,12 @@
 @media (min-width: 768px) {
   .homeInfoDiv {
     width: 500px;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
   }
 
   .homeMain {
-    height: 60vh;
+    min-height: 60vh;
   }
 
   .homeLinkContainers {
@@ -223,7 +251,6 @@
     display: flex;
     flex-direction: row;
     gap: 50px;
-    /* justify-content: center;
-    align-items: center; */
+   margin-bottom: 0;
   }
 }

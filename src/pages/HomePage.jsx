@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HomeInfoDiv from '../components/home-components/HomeInfoDiv';
 import HomeFooter from '../components/home-components/HomeFooter';
+
 
 function HomePage() {
   const scrollToTop = () => {
@@ -9,10 +11,7 @@ function HomePage() {
 
   return (
     <div className='homeContainer'>
-      <div className='homeInfoDiv'>
-        <h1>Wishes and Excuses made simple!</h1>
-        <h2>Generate wishes or excuses for different occasions</h2>
-      </div>
+     <HomeInfoDiv />
 
       <main className='homeMain'>
         <div className='homeLinkContainers'>
