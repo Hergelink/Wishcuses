@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <div className='homeContainer'>
       <div className='homeInfoDiv'>
-        <h1>Wishes and Excuses made simple!</h1>
+        <h1>Wishes and Excuses made simple!!</h1>
         <h2>Generate wishes or excuses for different occasions</h2>
       </div>
 
