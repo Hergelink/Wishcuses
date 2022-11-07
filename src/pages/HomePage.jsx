@@ -24,6 +24,16 @@ function HomePage() {
             <div className='homeDivs'>
               <div className='homeEmojiDivs'>🎂</div>
               <h3>Generate Wishes</h3>
+              <h4
+                style={{
+                  backgroundColor: 'black',
+                  color: 'red',
+                  padding: '3px',
+                  borderRadius: '3px',
+                }}
+              >
+                Currently under construction!
+              </h4>
             </div>
           </Link>
 

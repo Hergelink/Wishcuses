@@ -15,7 +15,7 @@ function WishesInfoContainer() {
           borderRadius: '3px',
         }}
       >
-        Currently the right API is not connected!!!
+        Currently a mock API is connected!
       </h4>
       <h4>Generate wishes for different occasions fast & simple</h4>
       <ul className='wishesList'>
