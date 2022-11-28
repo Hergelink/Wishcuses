@@ -47,6 +47,9 @@ function WishesPage() {
   };
 
   useEffect(() => {
+    // to scroll up
+    // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    // 
     fetchData();
   }, [value]);
 

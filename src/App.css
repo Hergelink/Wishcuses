@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 * {
   margin: 0;
@@ -8,22 +9,24 @@
   font-weight: 400;
 }
 
-.App {
-  height: 100vh;
-}
-
 .mainHeader {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 4rem;
 }
 
-.mainHeader a {
+.mainHeaderLogo {
   text-decoration: none;
   color: white;
   cursor: pointer;
   font-size: 2rem;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.logoDot {
+  color: yellow;
 }
 
 .arrow {
@@ -37,4 +40,217 @@
 
 .suitEmoji {
   font-size: 3rem;
+}
+
+/* Home Page */
+
+.homeMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.homeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.homeInfoDiv {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.homeHeaderSpan {
+  text-decoration: underline dashed yellow;
+}
+
+.homeInfoDiv h2 {
+  margin-top: 1rem;
+  width: 95%;
+  font-size: 1.4rem;
+}
+
+.lineBreak {
+  margin-top: 1rem;
+  width: 90%;
+  border: 0;
+  border-radius: 10px;
+  height: 0.1rem;
+  background-color: rgba(237, 237, 237, 0.148);
+}
+
+.homeInfoDiv p {
+  margin-top: 1rem;
+  width: 85%;
+  font-size: 1.2rem;
+}
+
+
+
+.homeLinkContainers {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeWishesContainer {
+  width: 80%;
+  height: 300px;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+  cursor: pointer;
+}
+
+.homeExcuseContainer {
+  width: 80%;
+  height: 300px;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #24c6dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+  cursor: pointer;
+}
+
+.homeDivs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeEmojiDivs {
+  width: 80px;
+  height: 80px;
+  /* background-color: white; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.homeFooter {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  color: white;
+}
+
+.homeFooter a {
+  text-decoration: underline dashed yellow;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  margin-left: 0.15rem;
+}
+
+@media (min-width: 768px) {
+  .homeInfoDiv {
+    width: 500px;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .homeMain {
+    min-height: 60vh;
+  }
+
+  .homeLinkContainers {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+   margin-bottom: 0;
+  }
 }

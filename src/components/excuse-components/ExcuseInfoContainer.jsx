@@ -21,6 +21,27 @@ function ExcuseInfoContainer() {
           <img src={rightArrow} fill='white' className='arrow' />
           <li>Excuses for Parties</li>
         </div>
+
+        <div className='excuseListItem'>
+          <img src={rightArrow} fill='white' className='arrow' />
+          <li>Excuses for Developers</li>
+        </div>
+        <div className='excuseListItem'>
+          <img src={rightArrow} fill='white' className='arrow' />
+          <li>Excuses for Gamers</li>
+        </div>
+        <div className='excuseListItem'>
+          <img src={rightArrow} fill='white' className='arrow' />
+          <li>Excuses for College Students</li>
+        </div>
+        <div className='excuseListItem'>
+          <img src={rightArrow} fill='white' className='arrow' />
+          <li>ExaggeratedExcuses</li>
+        </div>
+        <div className='excuseListItem'>
+          <img src={rightArrow} fill='white' className='arrow' />
+          <li>Funny Excuses</li>
+        </div>
       </ul>
     </div>
   );

@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import '../styles/excuse.css'
-
+import '../styles/excuse.css';
 import ExcuseHeader from '../components/excuse-components/ExcuseHeader';
-
 import ExcuseLinkContainer from '../components/excuse-components/ExcuseLinkContainer';
 import ExcuseFooter from '../components/excuse-components/ExcuseFooter';
 import ExcuseInfoContainer from '../components/excuse-components/ExcuseInfoContainer';
 import ExcuseContainer from '../components/excuse-components/ExcuseContainer';
-
 
 function ExcusePage() {
   const [excuse, setExcuse] = useState('');
@@ -31,12 +28,58 @@ function ExcusePage() {
     });
   };
 
+  const fetchDeveloperExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/developers/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
+  const fetchCollegeExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/developers/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
+  const fetchFunnyExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/funny/').then((res) => {
+      setExcuse(res.data[0]?.excuse);
+    });
+  };
+
+  const fetchExaggeratedExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/unbelievable/').then(
+      (res) => {
+        setExcuse(res.data[0]?.excuse);
+      }
+    );
+  };
+
+  const fetchGamerExcuse = () => {
+    Axios.get('https://excuser.herokuapp.com/v1/excuse/gaming/').then((res) => {
+      setExcuse(res.data[0]?.excuse);
+    });
+  };
+
   const fetchData = () => {
-    return value === 'office'
-      ? fetchOfficeExcuse()
+    return value === 'developer'
+      ? fetchDeveloperExcuse()
       : value === 'family'
       ? fetchFamilyExcuse()
-      : fetchPartyExcuse();
+      : value === 'party'
+      ? fetchPartyExcuse()
+      : value === 'college'
+      ? fetchCollegeExcuse()
+      : value === 'funny'
+      ? fetchFunnyExcuse()
+      : value === 'exaggerated'
+      ? fetchExaggeratedExcuse()
+      : value === 'gamer'
+      ? fetchGamerExcuse()
+      : fetchOfficeExcuse();
   };
 
   useEffect(() => {

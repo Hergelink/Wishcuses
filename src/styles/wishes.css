@@ -262,7 +262,7 @@
 }
 
 .wishesFooter a {
-  text-decoration: underline dashed rgb(36, 47, 155);
+  text-decoration: underline dashed red;
   color: black;
   font-weight: 900;
   cursor: pointer;
