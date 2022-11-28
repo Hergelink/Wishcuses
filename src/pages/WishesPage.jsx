@@ -29,6 +29,15 @@ function WishesPage() {
     });
   };
 
+  // const fetchBirthdayWish = () => {
+  //   Axios.get('https://6364e05d7b209ece0f50d969.mockapi.io/v1/wishes/birthday').then((res) => {
+  //     const arr = (res.data.birthdayWishes[0]?.birthdayWishes);
+  //     const concated = arr.concat()
+  //     console.log(concated[0])
+  //   });
+  // };
+  // fetchBirthdayWish();
+
   const fetchData = () => {
     return value === 'office'
       ? fetchOfficeExcuse()
