@@ -83,7 +83,7 @@
   padding: 20px;
   padding-bottom: 50px;
   width: 85%;
-  height: 450px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +95,7 @@
     rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 
   position: absolute;
-  bottom: -22rem;
+  bottom: -28rem;
 }
 
 .wishesEmojiContainer {
@@ -238,7 +238,7 @@
 
 .wishesStyleContainer {
   background-color: rgb(253, 166, 93);
-  height: 32rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,6 +257,8 @@
 }
 
 .wishesLinkContainer {
+  position: absolute;
+  bottom: -18rem;
   background-color: rgb(255, 130, 67);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
@@ -308,6 +310,7 @@
 
   .wishesLinkContainer {
     max-width: 350px;
+    bottom: -3.5rem;
   }
 }
 

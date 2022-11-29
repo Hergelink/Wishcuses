@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import HomeInfoDiv from '../components/home-components/HomeInfoDiv';
 import HomeFooter from '../components/home-components/HomeFooter';
 
-
 function HomePage() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -11,7 +10,7 @@ function HomePage() {
 
   return (
     <div className='homeContainer'>
-     <HomeInfoDiv />
+      <HomeInfoDiv />
 
       <main className='homeMain'>
         <div className='homeLinkContainers'>
@@ -23,16 +22,6 @@ function HomePage() {
             <div className='homeDivs'>
               <div className='homeEmojiDivs'>🎂</div>
               <h3>Generate Wishes</h3>
-              <h4
-                style={{
-                  backgroundColor: 'black',
-                  color: 'red',
-                  padding: '3px',
-                  borderRadius: '3px',
-                }}
-              >
-                Currently under construction!
-              </h4>
             </div>
           </Link>
 
