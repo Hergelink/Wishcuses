@@ -7,6 +7,7 @@ import WishesFooter from '../components/wishes-components/WishesFooter';
 import WishesInfoContainer from '../components/wishes-components/WishesInfoContainer';
 import WishesContainer from '../components/wishes-components/WishesContainer';
 
+
 function WishesPage() {
   const [generatedWish, setGeneratedWish] = useState('');
   const [userPromt, setUserPromt] = useState('')
@@ -76,7 +77,6 @@ function WishesPage() {
       <div className='wishesStyleContainer'>
         <WishesLinkContainer />
       </div>
-
       <div className='wishesStyleDivSecond'>
         <div className='wishesStyleCircleSecond'></div>
       </div>

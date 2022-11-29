@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function HomeFooter() {
   return (
     <footer className='homeFooter'>

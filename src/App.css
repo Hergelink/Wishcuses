@@ -221,6 +221,27 @@ background: linear-gradient(to right, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, F
   margin-left: 0.15rem;
 }
 
+.klevvversInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-image: black;
+  animation: colors 15s infinite;
+  background-image: radial-gradient(circle, transparent, rgba(0, 0, 255, 0.836));
+}
+
+.klevvversLogo {
+  width: 50%;
+}
+
 @media (min-width: 768px) {
   .homeInfoDiv {
     width: 500px;
@@ -230,6 +251,7 @@ background: linear-gradient(to right, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, F
 
   .homeMain {
     min-height: 60vh;
+    gap: 120px;
   }
 
   .homeLinkContainers {
@@ -240,3 +262,21 @@ background: linear-gradient(to right, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, F
    margin-bottom: 0;
   }
 }
+
+
+
+@keyframes colors {
+    0% {background-color: yellow;} 
+    25% {background-color: orange;} 
+    50% {background-color: yellow;} 
+    75% {background-color: orange;}  
+    100% {background-color: yellow;}  
+}
+
+/* @keyframes colors {
+    0% {background-color: #1D1CE5;} 
+    25% {background-color: #4649FF;} 
+    50% {background-color: #7978FF;} 
+    75% {background-color: #C47AFF;}  
+    100% {background-color: #3d3dd2;}  
+} */
