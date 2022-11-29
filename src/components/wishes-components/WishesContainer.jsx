@@ -7,6 +7,9 @@ function WishesContainer({
   copied,
   setCopied,
   handleSubmit,
+  setUserPromt,
+  temp,
+  setTemp,
 }) {
   return (
     <>
@@ -26,6 +29,30 @@ function WishesContainer({
             <option value='party'>Party Wishes</option>
           </select>
         </label>
+        <label htmlFor="userPromt" className='wishesLabel'>
+          <input className='wishesSelect' id='userPromt' type="text" 
+          
+          placeholder={`For: ${value === 'office' ? "My colleague's promotion" : value === 'party' ? 'My friends 28th birthday' : 'My cousin who won the lottery'}`}
+          
+          onChange={e => setUserPromt(e.target.value)} />
+        </label>
+
+        <div className='rangeSlider'>
+          <div className='rangeInfo'>
+            <p className='tempInfo'>Formal</p>
+            <p className='tempInfo'>{temp}</p>
+            <p className='tempInfo'>Creative</p>
+          </div>
+          <input
+            type='range'
+            min={0}
+            max={1}
+            step={0.01}
+            value={temp}
+            onChange={(e) => setTemp(e.target.value * 1)}
+            className='slider'
+          />
+        </div>
 
         <button className='wishesFetchButton' onClick={handleSubmit}>
           Generate Wishes

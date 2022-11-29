@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../styles/wishes.css';
 import WishesHeader from '../components/wishes-components/WishesHeader';
@@ -10,6 +10,7 @@ import WishesContainer from '../components/wishes-components/WishesContainer';
 
 function WishesPage() {
   const [generatedWish, setGeneratedWish] = useState('');
+  const [userPromt, setUserPromt] = useState('')
   const [value, setValue] = useState('');
   const [copied, setCopied] = useState(false);
  
@@ -37,7 +38,7 @@ function WishesPage() {
     await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `Create a Wish for: ${value}`,
+        prompt: `Create a sincere, kind wish for:${userPromt} in context of ${value}`,
         temperature: temp,
         max_tokens: 200,
         top_p: 1,
@@ -65,6 +66,9 @@ function WishesPage() {
           copied={copied}
           setCopied={setCopied}
           handleSubmit={handleSubmit}
+          setUserPromt={setUserPromt}
+          temp={temp}
+          setTemp={setTemp}
         />
       </main>
       <div className='wishesStyleDiv'>
