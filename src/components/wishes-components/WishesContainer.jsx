@@ -29,12 +29,20 @@ function WishesContainer({
             <option value='party'>Party Wishes</option>
           </select>
         </label>
-        <label htmlFor="userPromt" className='wishesLabel'>
-          <input className='wishesSelect' id='userPromt' type="text" 
-          
-          placeholder={`For: ${value === 'office' ? "My colleague's promotion" : value === 'party' ? 'My friends 28th birthday' : 'My cousin who won the lottery'}`}
-          
-          onChange={e => setUserPromt(e.target.value)} />
+        <label htmlFor='userPromt' className='wishesLabel'>
+          <input
+            className='wishesSelect'
+            id='userPromt'
+            type='text'
+            placeholder={`For: ${
+              value === 'office'
+                ? "My colleague's promotion"
+                : value === 'party'
+                ? 'My friends 28th birthday'
+                : 'My cousin who won the lottery'
+            }`}
+            onChange={(e) => setUserPromt(e.target.value)}
+          />
         </label>
 
         <div className='rangeSlider'>
@@ -60,14 +68,15 @@ function WishesContainer({
         <div
           className='generatedWishesCotainer'
           onClick={(e) => {
-            // navigator.clipboard.writeText(e.target.innerText);
-            navigator.clipboard.writeText(generatedWish);
+            if (generatedWish.length > 0) {
+              navigator.clipboard.writeText(generatedWish);
 
-            setCopied(true);
+              setCopied(true);
 
-            setTimeout(() => {
-              setCopied(false);
-            }, 5000);
+              setTimeout(() => {
+                setCopied(false);
+              }, 5000);
+            }
           }}
         >
           <p className='generatedWishes'>{generatedWish}</p>
@@ -76,6 +85,7 @@ function WishesContainer({
         <button
           className='wishesCopyButton'
           onClick={() => {
+            if (generatedWish.length > 0) {
             navigator.clipboard.writeText(generatedWish);
 
             setCopied(true);
@@ -83,6 +93,7 @@ function WishesContainer({
             setTimeout(() => {
               setCopied(false);
             }, 5000);
+          }
           }}
         >
           <img src={copyIcon} />

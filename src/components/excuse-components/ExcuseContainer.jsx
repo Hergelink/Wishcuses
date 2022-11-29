@@ -33,7 +33,7 @@ function ExcuseContainer({
         </div>
         <label htmlFor='excuse' className='excuseLabel'>
           <select
-            onChange={(e) => setValue(e.target.value)}            
+            onChange={(e) => setValue(e.target.value)}
             name='excuse'
             id='excuse'
             className='excuseSelect'
@@ -48,27 +48,30 @@ function ExcuseContainer({
             <option value='exaggerated'>Exaggerated Excuses</option>
           </select>
         </label>
-        <label htmlFor="userPromt" className='wishesLabel'>
-          <input className='wishesSelect' id='userPromt' type="text" 
-          
-          placeholder={`For: ${
-            value === 'family' ?
-            "A family gathering" 
-            : value === 'party' ? 
-            'My friends 28th birthday'
-            : value === 'developer' ?
-            'A computer Error'
-            : value === 'gamer' ?
-            'Too much ping'
-            : value === 'college' ?
-            'My exam physics tomorrow' 
-            : value === 'funny' ?
-            'Alien abduction'
-            : value === 'exaggerated' ?
-            'A meteor hit'           
-            : 'being late to work'}`}
-          
-          onChange={e => setUserPromt(e.target.value)} />
+        <label htmlFor='userPromt' className='wishesLabel'>
+          <input
+            className='wishesSelect'
+            id='userPromt'
+            type='text'
+            placeholder={`For: ${
+              value === 'family'
+                ? 'A family gathering'
+                : value === 'party'
+                ? 'My friends 28th birthday'
+                : value === 'developer'
+                ? 'A computer Error'
+                : value === 'gamer'
+                ? 'Too much ping'
+                : value === 'college'
+                ? 'My exam physics tomorrow'
+                : value === 'funny'
+                ? 'Alien abduction'
+                : value === 'exaggerated'
+                ? 'A meteor hit'
+                : 'being late to work'
+            }`}
+            onChange={(e) => setUserPromt(e.target.value)}
+          />
         </label>
         <div className='rangeSlider'>
           <div className='rangeInfo'>
@@ -93,13 +96,15 @@ function ExcuseContainer({
         <div
           className='generatedExcuseCotainer'
           onClick={(e) => {
-            navigator.clipboard.writeText(generatedExcuse);
+            if (generatedExcuse.length > 0) {
+              navigator.clipboard.writeText(generatedExcuse);
 
-            setCopied(true);
+              setCopied(true);
 
-            setTimeout(() => {
-              setCopied(false);
-            }, 5000);
+              setTimeout(() => {
+                setCopied(false);
+              }, 5000);
+            }
           }}
         >
           <p className='generatedExcuse'>{generatedExcuse}</p>
@@ -108,13 +113,15 @@ function ExcuseContainer({
         <button
           className='excuseCopyButton'
           onClick={() => {
-            navigator.clipboard.writeText(generatedExcuse);
+            if (generatedExcuse.length > 0) {
+              navigator.clipboard.writeText(generatedExcuse);
 
-            setCopied(true);
+              setCopied(true);
 
-            setTimeout(() => {
-              setCopied(false);
-            }, 5000);
+              setTimeout(() => {
+                setCopied(false);
+              }, 5000);
+            }
           }}
         >
           <img src={copyIcon} />
