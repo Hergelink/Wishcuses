@@ -1,12 +1,12 @@
 import copyIcon from '../../assets/copyIcon.svg';
 
-function ExcuseContainer({
-  excuse,
+function WishesContainer({
+  generatedWish,
   value,
   setValue,
   copied,
   setCopied,
-  fetchData,
+  handleSubmit,
 }) {
   return (
     <>
@@ -27,14 +27,14 @@ function ExcuseContainer({
           </select>
         </label>
 
-        <button className='wishesFetchButton' onClick={fetchData}>
+        <button className='wishesFetchButton' onClick={handleSubmit}>
           Generate Wishes
         </button>
         <div
           className='generatedWishesCotainer'
           onClick={(e) => {
             // navigator.clipboard.writeText(e.target.innerText);
-            navigator.clipboard.writeText(excuse);
+            navigator.clipboard.writeText(generatedWish);
 
             setCopied(true);
 
@@ -43,13 +43,13 @@ function ExcuseContainer({
             }, 5000);
           }}
         >
-          <p className='generatedWishes'>{excuse}</p>
+          <p className='generatedWishes'>{generatedWish}</p>
           {copied && <p className='wishesCopyPopUp'>Text Copied!</p>}
         </div>
         <button
           className='wishesCopyButton'
           onClick={() => {
-            navigator.clipboard.writeText(excuse);
+            navigator.clipboard.writeText(generatedWish);
 
             setCopied(true);
 
@@ -65,4 +65,4 @@ function ExcuseContainer({
   );
 }
 
-export default ExcuseContainer;
+export default WishesContainer;

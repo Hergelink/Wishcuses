@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import { Configuration, OpenAIApi } from 'openai';
 import '../styles/wishes.css';
 import WishesHeader from '../components/wishes-components/WishesHeader';
 
@@ -9,49 +9,48 @@ import WishesInfoContainer from '../components/wishes-components/WishesInfoConta
 import WishesContainer from '../components/wishes-components/WishesContainer';
 
 function WishesPage() {
-  const [excuse, setExcuse] = useState('');
+  const [generatedWish, setGeneratedWish] = useState('');
   const [value, setValue] = useState('');
   const [copied, setCopied] = useState(false);
+ 
 
-  const fetchFamilyExcuse = () => {
-    Axios.get('https://excuser.herokuapp.com/v1/excuse/family/').then((res) => {
-      setExcuse(res.data[0]?.excuse);
+  // Open ai states
+  
+  
+  const [temp, setTemp] = useState(1);
+  const [loading, setLoading] = useState(false);
+
+  // open ai init
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    
+    // OPEN AI-START
+
+    const configuration = new Configuration({
+      apiKey: process.env.REACT_APP_API_KEY,
     });
-  };
-  const fetchOfficeExcuse = () => {
-    Axios.get('https://excuser.herokuapp.com/v1/excuse/office/').then((res) => {
-      setExcuse(res.data[0]?.excuse);
-    });
-  };
-  const fetchPartyExcuse = () => {
-    Axios.get('https://excuser.herokuapp.com/v1/excuse/party/').then((res) => {
-      setExcuse(res.data[0]?.excuse);
-    });
-  };
 
-  // const fetchBirthdayWish = () => {
-  //   Axios.get('https://6364e05d7b209ece0f50d969.mockapi.io/v1/wishes/birthday').then((res) => {
-  //     const arr = (res.data.birthdayWishes[0]?.birthdayWishes);
-  //     const concated = arr.concat()
-  //     console.log(concated[0])
-  //   });
-  // };
-  // fetchBirthdayWish();
+    const openai = new OpenAIApi(configuration);
 
-  const fetchData = () => {
-    return value === 'office'
-      ? fetchOfficeExcuse()
-      : value === 'family'
-      ? fetchFamilyExcuse()
-      : fetchPartyExcuse();
+    await openai
+      .createCompletion({
+        model: 'text-davinci-002',
+        prompt: `Create a Wish for: ${value}`,
+        temperature: temp,
+        max_tokens: 200,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+      })
+      .then((response) => {
+        setGeneratedWish(response.data.choices[0].text);
+      });
+
+    // OPEN AI-END
+    setLoading(false);
   };
-
-  useEffect(() => {
-    // to scroll up
-    // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    // 
-    fetchData();
-  }, [value]);
 
   return (
     <div>
@@ -59,13 +58,13 @@ function WishesPage() {
       <main className='wishesMain'>
         <WishesInfoContainer />
         <WishesContainer
-          excuse={excuse}
-          setExcuse={setExcuse}
+          generatedWish={generatedWish}
+          setGeneratedWish={setGeneratedWish}
           value={value}
           setValue={setValue}
           copied={copied}
           setCopied={setCopied}
-          fetchData={fetchData}
+          handleSubmit={handleSubmit}
         />
       </main>
       <div className='wishesStyleDiv'>
