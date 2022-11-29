@@ -2,7 +2,6 @@ import React, { useState} from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../styles/wishes.css';
 import WishesHeader from '../components/wishes-components/WishesHeader';
-
 import WishesLinkContainer from '../components/wishes-components/WishesLinkContainer';
 import WishesFooter from '../components/wishes-components/WishesFooter';
 import WishesInfoContainer from '../components/wishes-components/WishesInfoContainer';
