@@ -257,8 +257,6 @@
 }
 
 .wishesLinkContainer {
-  position: absolute;
-  bottom: -18rem;
   background-color: rgb(255, 130, 67);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
